@@ -41,7 +41,9 @@ class FormCollection {
 
     private function connect(){
         try {
-            $this->mysqli = new mysqli($this->host, $this->username,  $this->password,  $this->dbName, 3306);
+            // $this->mysqli = new mysqli($this->host, $this->username,  $this->password,  $this->dbName, 3306);
+            $this->mysqli = new mysqli("localhost", "root",  "root",  "practicedb", 3306);
+
             // echo "<br>Connection Established.<br>";
             return false;
         } catch (Error $e){
