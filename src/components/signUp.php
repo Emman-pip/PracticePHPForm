@@ -23,7 +23,8 @@ if ($_POST){
         }
         echo "signup success";
         session_abort();
-        header("Location:"  . $_SERVER['REQUEST_URI'], true, 303);
+        header("Location:"  . "index.php", true, 303);
+        session_abort();
         exit();
     }
 }

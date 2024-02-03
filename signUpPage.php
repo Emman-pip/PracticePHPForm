@@ -7,7 +7,7 @@
 <main class="signUpPage">
     
     <h1>SIGNUP</h1>
-        <form action="index.php" method="POST" class="signUpForm">
+        <form action="signUpPage.php" method="POST" class="signUpForm">
             <label for="displayName">
                 display name: 
             </label>
@@ -21,10 +21,16 @@
             </label>
             <input type="password" name="pass" minlength="8">
             <input type="submit" name="submit" value="SIGNUP">
-            <button class="goToLogin">GO TO LOGIN</button>
+            <form action="signUpPage" method="POST">
+                <button name="goToLogin">GO TO LOGIN</button>
+            </form>
         </form>
 </main>
     <?php 
         // include "./src/components/DB.php";
-        include "./src/components/signUp.php"
+        if (isset($_POST['goToLogin'])){
+            header("Location: " .  "/login.php", true, 302);
+            exit();
+        }
+        include "./src/components/signUp.php";
     ?>

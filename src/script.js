@@ -27,10 +27,5 @@ const signUpTypeChecking = () => {
   return { passRetypeCheck };
 };
 
-document.querySelector(".goToLogin").addEventListener("click", () => {
-  window.close();
-  window.open("../login.php");
-});
-
 console.log("working");
 signUpTypeChecking().passRetypeCheck();

@@ -75,6 +75,16 @@ $borderRadiusSmall: 0.2rem;
   }
 }
 
+.loginPage {
+  @include displayFlexCenter();
+  flex-direction: column;
+  min-height: 100lvh;
+  form {
+    @include formContainer();
+    @include displayGrid2Columns();
+  }
+}
+
 //   main {
 //     min-height: 100vh;
 //     min-height: 100lvh;

@@ -46,4 +46,43 @@
 .signUpPage .signUpForm input[type=email]:focus {
   outline: 2px solid #264ae9;
   background-color: #928abe;
+}
+
+.loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100lvh;
+}
+.loginPage form {
+  background-color: #928abe;
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.4rem;
+}
+.loginPage form input[type=text],
+.loginPage form input[type=password],
+.loginPage form input[type=email] {
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  border: none;
+}
+.loginPage form input:invalid {
+  border: 1px solid red;
+}
+.loginPage form input[type=submit],
+.loginPage form button {
+  background-color: #6abaa3;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.loginPage form input[type=text]:focus,
+.loginPage form input[type=password]:focus,
+.loginPage form input[type=email]:focus {
+  outline: 2px solid #264ae9;
+  background-color: #928abe;
 }/*# sourceMappingURL=styles.css.map */
