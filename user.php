@@ -23,7 +23,9 @@
     if ($_POST){
         if (isset($_POST['logout'])){
             header("Location: index.php");
+            session_destroy();
             session_abort();
+
             exit();
         }
     }
