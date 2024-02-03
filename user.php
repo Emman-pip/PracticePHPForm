@@ -11,7 +11,8 @@
     include "./src/components/DB.php";
     $db = new FormCollection();
     $email = $_SESSION['email'];
-    $data = $db->selectQuery("SELECT id, displayName FROM credentials WHERE email = '$email'");
+    // follow documentation about escape strings to fight against sql injections
+    $data = $db->selectQuery("SELECT id, displayName FROM credentials WHERE email = '$email'"); 
 
     echo "WELCOME " . $data[0][1];
     ?>
