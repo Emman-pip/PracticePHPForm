@@ -9,9 +9,11 @@
     </style>
 </head>
 <body>
-    <?php
-    include "./signUpPage.php";
-    ?>
+    <main class="indexHero">
+        <?php
+        include "./signUpPage.php";
+        ?>
+    </main>
     <script>
         <?php include "./src/script.js"?>
     </script>
