@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "./DB.php";
+include "DB.php";
 
 if ($_POST){
     if (
@@ -17,8 +17,9 @@ if ($_POST){
         $db = new FormCollection();
         try {
             $db->actionQuery("INSERT INTO Credentials(displayName, email, pass ) VALUES('$name', '$email', '$pwd')");
-        } catch (Error $e){
-            echo "CHANGE ANOTHER NAME OR USERNAME";
+        } catch (mysqli_sql_exception $e){
+            echo "CHANGE USERNAME OR EMAIL";
+            exit();
         }
         echo "signup success";
         session_abort();
