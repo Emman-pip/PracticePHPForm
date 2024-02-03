@@ -12,7 +12,7 @@
     <main>
         <?php 
         include "./src/components/DB.php";
-        include "./src/components/signUp.php";
+        include "./signUp.php";
         ?>
     </main>
     <script>
