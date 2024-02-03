@@ -15,7 +15,11 @@ if ($_POST){
         // $query = "INSERT INTO Credentials(displayName, email, pass ) VALUES('$name', '$email', '$pwd')";
 
         $db = new FormCollection();
-        $db->actionQuery("INSERT INTO Credentials(displayName, email, pass ) VALUES('$name', '$email', '$pwd')");
+        try {
+            $db->actionQuery("INSERT INTO Credentials(displayName, email, pass ) VALUES('$name', '$email', '$pwd')");
+        } catch (Error $e){
+            echo "CHANGE ANOTHER NAME OR USERNAME";
+        }
         echo "signup success";
         session_abort();
         header("Location:"  . $_SERVER['REQUEST_URI'], true, 303);
