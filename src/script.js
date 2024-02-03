@@ -11,7 +11,7 @@ const signUpTypeChecking = () => {
         pass1.value.length < 8 ||
         pass2.value.length < 8
       ) {
-        console.log("unmatching");
+        // console.log("unmatching");
         pwds.forEach((pass) => {
           pass.style.outline = "1px solid red";
         });
@@ -26,6 +26,11 @@ const signUpTypeChecking = () => {
   };
   return { passRetypeCheck };
 };
+
+document.querySelector(".goToLogin").addEventListener("click", () => {
+  window.close();
+  window.open("../login.php");
+});
 
 console.log("working");
 signUpTypeChecking().passRetypeCheck();

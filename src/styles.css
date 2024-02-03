@@ -39,21 +39,21 @@ input[type="email"]:focus {
   background-color: var(--color-2);
 }
 
+input {
+  outline: 1px solid black;
+}
+
 input:invalid {
   outline: 1px solid red;
 }
 
-.signInPrompt {
+main {
   display: grid;
   grid-template-columns: min(30rem, 80%);
   min-height: fit-content;
 }
 
-.signInPrompt > .signUpTitle {
-  font-weight: 500;
-}
-
-.signInPrompt > form {
+form {
   background-color: var(--color-3);
   padding: 1rem;
   display: flex;
